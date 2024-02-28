@@ -33,3 +33,7 @@ dx4 = (p.Lp * p.mp * sin(x2) / Delta) * (p.Lp * cos(x2) * (x3^2 * (4 * p.Jr + p.
        + 8 * p.km^2 * p.Lp * p.Lr * p.mp * cos(x2) * x3 / (p.Rm * Delta) ...
        - 8 * p.km * p.Lp * p.Lr * p.mp * cos(x2) * vm / (p.Rm * Delta);
 
+%% State derivate vector
+
+dx = [dx1;dx2;dx3;dx4];
+
