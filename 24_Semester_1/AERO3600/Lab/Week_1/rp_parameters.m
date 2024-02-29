@@ -1,4 +1,4 @@
-function rp_p = rp_parameters()
+function [rp_p] = rp_parameters()
 
 rp_p.mr = 0.095;
 rp_p.Lr = 0.085;
