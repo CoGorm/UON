@@ -23,7 +23,7 @@ rp_p.Vm = 0;
 rp_p.Aa = [0, 0, 1, 0;
            0, 0, 0, 1;
            0, (rp_p.g * rp_p.Lp^2 * rp_p.Lr * rp_p.mp^2) / (rp_p.Jt), - (rp_p.km^2 * (4 * rp_p.Jp + rp_p.Lp^2 * rp_p.mp)) / (rp_p.Jt * rp_p.Rm), 0;
-           0, - (2 * rp_p.g * rp_p.mp * (rp_p.Jr + rp_p.Lr^2 * rp_p.mp)) / (rp_p.Jt), (2 * rp_p.km^2 * rp_p.Lp * rp_p.Lr * rp_p.mp) / (rp_p.Jt * rp_p.Rm), 0];
+           0, -(2 * rp_p.g * rp_p.mp * (rp_p.Jr + rp_p.Lr^2 * rp_p.mp)) / (rp_p.Jt), (2 * rp_p.km^2 * rp_p.Lp * rp_p.Lr * rp_p.mp) / (rp_p.Jt * rp_p.Rm), 0];
 
 rp_p.Ba = [0; 0; (rp_p.km * (4 * rp_p.Jp + rp_p.Lp^2 * rp_p.mp)) / (rp_p.Jt * rp_p.Rm); - (2 * rp_p.km * rp_p.Lp * rp_p.Lr * rp_p.mp) / (rp_p.Jt * rp_p.Rm)];
 
@@ -31,7 +31,7 @@ rp_p.Ba = [0; 0; (rp_p.km * (4 * rp_p.Jp + rp_p.Lp^2 * rp_p.mp)) / (rp_p.Jt * rp
 rp_p.Ab =  [0, 0, 1, 0;
            0, 0, 0, 1;
            0, (rp_p.g * rp_p.Lp^2 * rp_p.Lr * rp_p.mp^2) / (rp_p.Jt), - (rp_p.km^2 * (4 * rp_p.Jp + rp_p.Lp^2 * rp_p.mp)) / (rp_p.Jt * rp_p.Rm), 0;
-           0, (2 * rp_p.g * rp_p.mp * (rp_p.Jr + rp_p.Lr^2 * rp_p.mp)) / (rp_p.Jt), - (2 * rp_p.km^2 * rp_p.Lp * rp_p.Lr * rp_p.mp) / (rp_p.Jt * rp_p.Rm), 0];
+           0, -(2 * rp_p.g * rp_p.mp * (rp_p.Jr + rp_p.Lr^2 * rp_p.mp)) / (rp_p.Jt), (2 * rp_p.km^2 * rp_p.Lp * rp_p.Lr * rp_p.mp) / (rp_p.Jt * rp_p.Rm), 0];
 
-rp_p.Bb = [0; 0; (rp_p.km * (4 * rp_p.Jp + rp_p.Lp^2 * rp_p.mp)) / (rp_p.Jt * rp_p.Rm); (2 * rp_p.km * rp_p.Lp * rp_p.Lr * rp_p.mp) / (rp_p.Jt * rp_p.Rm)];
+rp_p.Ba = [0; 0; (rp_p.km * (4 * rp_p.Jp + rp_p.Lp^2 * rp_p.mp)) / (rp_p.Jt * rp_p.Rm); - (2 * rp_p.km * rp_p.Lp * rp_p.Lr * rp_p.mp) / (rp_p.Jt * rp_p.Rm)];
 end
