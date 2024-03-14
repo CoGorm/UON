@@ -2,13 +2,13 @@ function [rp_p] = rp_parameters()
 %% Model parameters
 rp_p.mr = 0.095;
 rp_p.Lr = 0.085;
-rp_p.Jr = 1/12;
+rp_p.Jr = 1/12 * rp_p.mr * rp_p.Lr^2;
 
 rp_p.mp = 0.024;
 rp_p.Lp = 0.129;
-rp_p.Jp = 1/12;
-rp_p.g = 9.81;
+rp_p.Jp = 1/12 * rp_p.mp * rp_p.Lp^2;
 
+rp_p.g = 9.81;
 rp_p.Rm = 8.4;
 rp_p.km = 0.042;
 
@@ -27,7 +27,13 @@ rp_p.xbarb = [0;
               0;
               0];
 
+rp_p.ubara = 0;
+rp_p.ubarb = 0;
+
 rp_p.Vm = 0;
+
+rp_p.Ec = [-5, -6, -7, -8];
+
 
 %% a
 rp_p.Aa = [0,   0,                                                                                  1,                                                                          0;
