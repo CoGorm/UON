@@ -2,19 +2,20 @@
 
 #include <stdio.h>
 
-int main ( void )
-{
-    int i;
-    int c;
+int main(void) {
+  int i;
+  int c;
 
-    puts("Enter five characters and press ENTER:");
+  puts("Enter five characters and press ENTER:");
 
-    for (i=1;i<=5;i++)
-    {
-	fflush(stdout);
-	c = getchar();
-	printf (" Input %i : '%c'\n", i, c);
-    }
+  for (i = 1; i <= 5; i++) {
+    fflush(stdout);
+    c = getchar();
+    printf(" Input %i : '%c'\n", i, c);
 
-    return 0;
+    scanf("%d", &c);
+    printf(" Input %i : '%d'\n", i, c);
+  }
+
+  return 0;
 }
