@@ -16,11 +16,11 @@ p.p10 = 0;
 p.p20 = 0;
 p.xs0 = 0.8;
 
-%% CCRs (Component Constitutive Relations)
+%% CCRs
 p.Fs = @(xs) 1/p.c * (xs - p.l0) + p.B/xs + p.B/(2 * p.l0 - xs);
 p.Fd = @(vd) (p.bd * vd) * abs(vd);
 
-%% SSRs (State-Space Relations)
+%% SSRs
 p.vm1 = @(p1) 1/p.m1 * p1;
 p.vm2 = @(p2) 1/p.m2 * p2;
 p.vb1 = @(vm1) vm1;
