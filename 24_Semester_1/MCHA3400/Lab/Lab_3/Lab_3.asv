@@ -59,7 +59,7 @@ x0 = [0; 0; 0];
 
 %% Simulation using ode23s
 ode_wrap = @(t, x) sys_ode(x, u(t));
-[t, x] = ode23s(ode_wrap, t_span, x0, odeset('RelTol',1e-6));
+[t, x] = ode23s(ode_wrap, t_span, x0);
 plotFun(t, x, p);
 
 function plotFun(t, x, p)
