@@ -15,8 +15,12 @@ rp_p.km = 0.042;
 
 rp_p.Vm = 0;
 
-rp_p.Ec = [-5, -6, -7, -8];
-rp_p.Eo = [-25, -26, -27, -28];
+rp_p.Eca = [-5, -6, -7, -8];
+rp_p.Ecb = [-5, -6, -7, -8];
+
+rp_p.Eoa = [-25, -26, -27, -28];
+rp_p.Eob = [-30, -31, -32, -33];
+
 %% Linearised model parameters
 rp_p.Jt = rp_p.Jr * rp_p.Lp^2 * rp_p.mp + 4 * rp_p.Jp * (rp_p.Jr + rp_p.Lr^2 * rp_p.mp);
 
@@ -63,7 +67,7 @@ rp_p.Cb = [1, 0, 0, 0;
   0, 1, 0, 0];
 
 %% ybar
-rp_p.ybara = rp_p.Ca * rp_p.xbara
+rp_p.ybara = rp_p.Ca * rp_p.xbara;
 
-rp_p.ybarb = rp_p.Cb * rp_p.xbarb
+rp_p.ybarb = rp_p.Cb * rp_p.xbarb;
 end

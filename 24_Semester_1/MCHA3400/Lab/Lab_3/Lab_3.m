@@ -27,7 +27,7 @@ V_L1 = @(V_in, V_R1, V_C1, V_R2) V_in - V_R1 - V_C1 - V_R2;
 I_C1 = @(I_L1, I_L2) I_L1 - I_L2;
 I_R2 = @(I_L1, I_L2) I_L1 - I_L2;
 I_R3 = @(I_L2) I_L2;
-V_L2 = @(V_C1, V_R2, V_R3) V_C1 - V_R2 - V_R3;
+V_L2 = @(V_C1, V_R2, V_R3) V_C1 + V_R2 - V_R3;
 
 %% Define State Space Equations
 % Inductor current dynamics
@@ -48,7 +48,8 @@ x0 = [0; 0; 0];
 
 %% Simulation using ode23s
 ode_wrap = @(t, x) sys_ode(x, u);
-[t, x] = ode23s(ode_wrap, t_span, x0);
+
+[t, x] = ode23s(ode_wrap, t_span, x0, odeset('RelTol',1e-6));
 plotFun(t, x, p);
 
 %% Simulation Parameters

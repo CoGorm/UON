@@ -14,6 +14,7 @@ ylim([1.1 * x_min, 1.1 * x_max]);
 
 title(rp_title);
 grid;
+
 xlabel('Time [s]');
 ylabel('Arm angle [deg]');
 legend('x_1 Nonlinear', 'x_1 Linear');  % Add legend for clarity

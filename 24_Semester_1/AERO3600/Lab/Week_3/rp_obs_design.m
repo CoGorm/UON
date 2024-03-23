@@ -7,3 +7,4 @@ else
 end
 
 L = place(A.', C.', Eo).';
+end

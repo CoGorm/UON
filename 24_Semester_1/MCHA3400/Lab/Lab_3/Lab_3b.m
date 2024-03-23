@@ -9,12 +9,12 @@ p.b = 0.042;
 p.c = 0.227;
 p.KT = 2.64;
 
-%% Define State Equations
+%% define state equations
 
-fv = @(I_in, lambda, q) ((p.R)/(p.KT^2 + p.b * p.R)) * (p.KT * I_in - p.KT * lambda / p.L - q / p.c)
+fv = @(i_in, lambda, q) ((p.r)/(p.kt^2 + p.b * p.r)) * (p.kt * i_in - p.kt * lambda / p.l - q / p.c)
 
-dlambda = @(I_in, lambda, q) p.KT * fv(I_in, lambda, q)
-dq = @(I_in, lambda, q) fv(I_in, lambda, q)
+dlambda = @(i_in, lambda, q) p.kt * fv(i_in, lambda, q)
+dq = @(i_in, lambda, q) fv(i_in, lambda, q)
 
 %% ODE Equations
 
@@ -39,7 +39,7 @@ ode_wrap = @(t, x) sys_ode(x, I_in(t));
 %% Plot
 figure;
 subplot(2,1,1);
-plot(t, x(:,1), 'LineWidth', 2, 'Color', 'r');
+plot(t, x(:,1)/p.L, 'LineWidth', 2, 'Color', 'r');
 xlabel('Time (s)');
 grid on;
 legend("I_\lambda");
